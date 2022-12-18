@@ -88,7 +88,7 @@ main(){
 		sprintf(zodiac_sign, "%s", "Virgo");
 	}
 	if((date[0] >= 23 && date[1] == 9 )|| (date[0]<23 && date[1] == 10)){
-		sprintf(zodiac_sign, "%s", "Scales");
+		sprintf(zodiac_sign, "%s", "Balance");
 	}
 	if((date[0] >= 23 && date[1] == 10 )|| (date[0]<23 && date[1] == 11)){
 		sprintf(zodiac_sign, "%s", "Scorpion");
@@ -103,7 +103,7 @@ main(){
 		sprintf(zodiac_sign, "%s", "Aquarius");
 	}
 	if((date[0] >= 20 && date[1] == 2 )|| (date[0]<21 && date[1] == 3)){
-		sprintf(zodiac_sign, "%s", "Aries");
+		sprintf(zodiac_sign, "%s", "Fishes");
 	}
 	
 	printf("\nOracle %i.%i.%i\n", date[0], date[1], date[2]);
