@@ -4,21 +4,20 @@ main(){
 	
 	int i = 0;
 	
-		while(i < 15){
+	while(i < 15){
 		printf("Iteration = %i, values = %i \n", i+1, i );
 		i++;
 	}
 	
 	printf("\n\n");
 	
-		while(i < 24){
+	while(i < 24){
 		printf("%i = Hello ", i-14);
 		i++;
 	}
 	
 	printf("\n\n");
 	printf("Iteration = %i\n", i);
-
 	
 	printf("\n\n");
 	
