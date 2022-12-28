@@ -11,22 +11,15 @@ main(){
 		scanf("%i", &numbers[i]);
 	}
 	int MIN = numbers[0];
+	int MAX = numbers[0];
+	int summa = 0;
 	for(int i = 0; i < user_numbers; i++){
 		if(MIN > numbers[i]){
 			MIN = numbers[i];
 		}
-		
-	}
-	
-	int MAX = numbers[0];
-	for(int i = 0; i < user_numbers; i++){
 		if(MAX < numbers[i]){
 			MAX = numbers[i];
 		}
-	}
-	
-	int summa = 0;
-	for(int i = 0; i < user_numbers; i++){
 		summa = summa + numbers[i];
 		
 	}
