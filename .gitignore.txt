@@ -30,4 +30,8 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD:.gitignore.txt
 *.vs/
+=======
+*.vs/
+>>>>>>> 2c1b595752645a1cbc45dc30e067780963d7ecf6:.gitignore
