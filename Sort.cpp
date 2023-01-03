@@ -12,7 +12,6 @@ main(){
 	
 	int max = 0;
 	for(int i = 0; i < user_vvod; i++){
-		int max = 0;
 		for(int j = 0; j < user_vvod; j++){
 		
 			if(user_array[j] > user_array[j+1]){
