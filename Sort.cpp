@@ -25,7 +25,7 @@ int main(){
 		}
 		
 		else{
-			printf("\nМассив не должен быть более 100 элементов \n\nEnter size array ");
+			printf("\nArray must not exceed 100 elements \n\nEnter size array ");
 		}
 	}
 	
