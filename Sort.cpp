@@ -1,28 +1,40 @@
-# include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
 
-main(){
-	printf("First task \nAmount of numbers: ");
+
+int main(){
+	system("chcp 1251");
+	printf("\nВведите размер массива: ");
+	int *massiv;
 	int user_vvod = 0;
 	scanf("%i", &user_vvod);
-	int user_array[user_vvod];
-	
-	for(int i = 0; i < user_vvod; i++){
-		scanf("%i", &user_array[i]);
+
+	if(user_vvod <= 100){
+		massiv = (int*)malloc(user_vvod * sizeof(int));
+		for(int i = 0; i < user_vvod; i++){
+			printf("Значение ячейки  %i = ", i);
+			scanf("%i ", &massiv[i]);
+		}
+	}
+	else{
+		printf("Массив не должен быть более 100 элементов");
 	}
 	
 	int max = 0;
 	for(int i = 0; i < user_vvod; i++){
-		for(int j = 0; j < user_vvod; j++){
-			if(user_array[j] > user_array[j+1]){
-				max = user_array[j];
-				user_array[j] = user_array[j+1];
-				user_array[j+1] = max;
+		for(int j = 0; j < user_vvod-1; j++){
+			if(massiv[j] > massiv[j+1]){
+				max = massiv[j];
+				massiv[j] = massiv[j+1];
+				massiv[j+1] = max;
 			}
 		}
 	}
 	
-	printf("\n");
-	for(int i = 0; i < sizeof(user_array)/sizeof(user_array[0]); i++){
-		printf("%i ", user_array[i]);
+	printf("\nВывод: \n");
+	for(int i = 0; i < user_vvod; i++){
+		printf("%i ", massiv[i]);
 	}
 }
