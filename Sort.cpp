@@ -1,27 +1,36 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include <locale.h>
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
 
 int main(){
-	system("chcp 1251");
-	printf("\nВведите размер массива: ");
+	setlocale(LC_ALL, "Russian");
+	//system("chcp 1251");
+	printf("\nEnter size array ");
 	int *massiv;
 	int user_vvod = 0;
-	scanf("%i", &user_vvod);
-
-	if(user_vvod <= 100){
-		massiv = (int*)malloc(user_vvod * sizeof(int));
-		for(int i = 0; i < user_vvod; i++){
-			printf("Значение ячейки  %i = ", i);
-			scanf("%i ", &massiv[i]);
+	
+	while(true){
+		scanf("%i", &user_vvod);
+		
+		if(user_vvod <= 100){
+			massiv = (int*)malloc(user_vvod * sizeof(int));
+			for(int i = 0; i < user_vvod; i++){
+				printf("Value  %i = ", i);
+				scanf("%i", &massiv[i]);
+			}
+			break;
+		}
+		
+		else{
+			printf("\nМассив не должен быть более 100 элементов \n\nEnter size array ");
 		}
 	}
-	else{
-		printf("Массив не должен быть более 100 элементов");
-	}
 	
+
+
 	int max = 0;
 	for(int i = 0; i < user_vvod; i++){
 		for(int j = 0; j < user_vvod-1; j++){
@@ -33,7 +42,7 @@ int main(){
 		}
 	}
 	
-	printf("\nВывод: \n");
+	printf("\n");
 	for(int i = 0; i < user_vvod; i++){
 		printf("%i ", massiv[i]);
 	}
