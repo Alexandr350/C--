@@ -24,7 +24,7 @@ main(){
 	massiv = (int*)malloc(user_vvod * sizeof(int));
 	
 	for(int i = 0; i < user_vvod; i++){
-		printf("Value%i = ", i);
+		printf("Value %i = ", i);
 		scanf("%i", &massiv[i]);
 	}
 	printf("\n");
