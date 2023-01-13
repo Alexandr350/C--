@@ -46,4 +46,5 @@ int main(){
 	for(int i = 0; i < user_vvod; i++){
 		printf("%i ", massiv[i]);
 	}
+	free(massiv);
 }
