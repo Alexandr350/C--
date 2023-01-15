@@ -35,7 +35,7 @@ int main(){
 	for(int i = 0; i < user_vvod; i++){
 		summa = summa + massiv[i];
 	}
-	int medium = summa/user_vvod;
-	printf("\nMin: %i \nMax: %i \nSumma: %i \nMedium: %i", massiv[0], massiv[user_vvod-1], summa, medium);
+	float medium = (float)summa/user_vvod;
+	printf("\nMin: %i \nMax: %i \nSumma: %i \nMedium: %.2f", massiv[0], massiv[user_vvod-1], summa, medium);
 	free(massiv);
 }
