@@ -12,30 +12,29 @@ int main(){
 	int user_vvod = 0;
 	
 	scanf("%i", &user_vvod);
-		
-		
+			
 	massiv = (int*)malloc(user_vvod * sizeof(int));
-		for(int i = 0; i < user_vvod; i++){
-			printf("Value  %i = ", i);
-			scanf("%i", &massiv[i]);
-		}
-	
-	int max = 0;
 	for(int i = 0; i < user_vvod; i++){
-		for(int j = 0; j < user_vvod-1; j++){
-			if(massiv[j] > massiv[j+1]){
-				max = massiv[j];
-				massiv[j] = massiv[j+1];
-				massiv[j+1] = max;
-			}
-		}
+		printf("Value  %i = ", i);
+		scanf("%i", &massiv[i]);
 	}
 	
-	int summa = 0;
+	int MIN, MAX,summa;
 	for(int i = 0; i < user_vvod; i++){
+		
+		if(i == 0){
+			MIN = massiv[i];
+		}
+		if(MAX < massiv[i]){
+			MAX = massiv[i];
+		}
+		if(MIN > massiv[i]){
+			MIN = massiv[i];
+		}
 		summa = summa + massiv[i];
 	}
+	
 	float medium = (float)summa/user_vvod;
-	printf("\nMin: %i \nMax: %i \nSumma: %i \nMedium: %.2f", massiv[0], massiv[user_vvod-1], summa, medium);
+	printf("\nMin: %i \nMax: %i \nSumma: %i \nMedium: %.2f", MIN, MAX, summa, medium);
 	free(massiv);
 }
