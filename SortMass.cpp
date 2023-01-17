@@ -19,7 +19,7 @@ int main(){
 		scanf("%i", &massiv[i]);
 	}
 	
-	int MIN, MAX,summa;
+	int MIN, MAX, summa;
 	for(int i = 0; i < user_vvod; i++){
 		
 		if(i == 0){
