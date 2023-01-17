@@ -18,10 +18,10 @@ int main(){
 	for(int j = 0; j < user_vvod_str; j++){
 		printf("\n");
 		massiv[j] = (int*)malloc(user_vvod_column* sizeof(int)); 
-		
+	
 		for(int i = 0; i < user_vvod_column; i++){
-		printf("Value %i %i = ", j, i);
-		scanf("%i", &massiv[j][i]);
+			printf("Value %i %i = ", j, i);
+			scanf("%i", &massiv[j][i]);
 	
 		}
 		
@@ -31,8 +31,7 @@ int main(){
 	for(int j = 0; j < user_vvod_str; j++){
 		
 		for(int i = 0; i < user_vvod_column; i++){
-		printf(" %i ", massiv[j][i]);
-	
+			printf(" %i ", massiv[j][i]);
 		}
 		printf("\n");
 	}
