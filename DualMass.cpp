@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
 
 int main(){
 	
@@ -43,5 +44,5 @@ int main(){
 	free(massiv);
 	
 	
-	return 0;
+	return EXIT_SUCCESS;;
 }
