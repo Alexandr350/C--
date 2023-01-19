@@ -35,15 +35,18 @@ int main(){
 		}
 		printf("\n");
 	}
-
+	
+	
+	
 	printf("\n");
-	for(int j = 0; j < user_vvod_column; j++){
+	for(int j = 0; j < user_vvod_str; j++){
 		
-		for(int i = 0; i < user_vvod_str; i++){
-			printf(" %i ", massiv[j][i]);
+		for(int i = 0; i < user_vvod_column; i++){
+			printf(" %i ", massiv[i][j]);
 		}
 		printf("\n");
 	}
+	
 	
 	for(int i = 0; i < user_vvod_str; i++){
 		free(massiv[i]);
