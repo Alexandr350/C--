@@ -76,7 +76,7 @@ int main(){
 	}
 	
 	
-	printf("\nResers massiv \n");
+	printf("\nRevers massiv \n");
 	for(int j = 0; j < user_vvod_str; j++){
 			
 		int buff = massiv[j][0];
