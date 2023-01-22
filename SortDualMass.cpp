@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(){
 	
@@ -26,7 +27,7 @@ int main(){
 		}
 		
 	}*/
-	
+	srand(time(NULL));
 	for(int j = 0; j < user_vvod_str; j++){
 		printf("\n");
 		massiv[j] = (int*)malloc(user_vvod_column* sizeof(int)); 
@@ -102,5 +103,5 @@ int main(){
 	free(massiv);
 	
 	
-	return EXIT_SUCCESS;;
+	return EXIT_SUCCESS;
 }
