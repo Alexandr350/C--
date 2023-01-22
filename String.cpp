@@ -7,7 +7,7 @@
 void user_input(char str[]);
 void print_text(char str[]);
 void revers_str(char str[]);
-char user_select();
+int user_select();
 void delete_char(char str[], int select);
 int main(){
 	
@@ -39,7 +39,7 @@ void revers_str(char str[]){
 	printf("%s\n", str);
 }
 
-char user_select(){
+int user_select(){
 	int select;
 	printf("\nInput char\n");
 	scanf("%i", &select);
