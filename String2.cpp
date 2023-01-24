@@ -14,7 +14,6 @@ int main(){
 	char str_mirror[10];
 	
 	user_input(str);
-	print(str);
 	delete_char(str);
 	print(str);
 	mirror(str, str_mirror);
