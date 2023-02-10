@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 main(){
+	char text[] = "text";
 	int a , b;
 	printf("Vvedite A and B\n");
 	scanf("%i", &a);
