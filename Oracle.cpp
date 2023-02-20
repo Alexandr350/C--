@@ -28,7 +28,7 @@ main(){
 	}	
 	else{
 		sprintf(year, "%s", "No high year!!!");
-	}
+	}	
 	
 	switch(date[2]%12){
 		case 0:
