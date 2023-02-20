@@ -39,15 +39,12 @@ public:
 	}
 		
 	void setCredit_term(int crtr){
-		this -> credit_term = crtr;
-		
-		
+		this -> credit_term = crtr;		
 	}
 	
 	
 	void setProcent(double proc){
-		this -> procent = proc;
-		
+		this -> procent = proc;	
 	}
 		
 	long double getBegginer_summ_credit(){
@@ -55,9 +52,7 @@ public:
 	}
 	
 	int getCredit_term(){
-	
-		return credit_term;	
-		
+		return credit_term;		
 	}
 	
 	double getProcent(){
@@ -70,57 +65,56 @@ class UserVvod{
 	
 public:
 	
-				bool check(string str){
-					return !str.empty() && str.find_first_not_of("0123456789.") == std::string::npos;
-					
-				}
-				
-				void user_vvod(Credit &credit){
-					
-					for(int i = 0; i <3; i++){
-						string user_v;
-						if(i == 0){
-							cout << "Amount of credit  " << endl;
-							cout << "Summa:  ";
-							getline(cin,user_v);
-							if (check(user_v) == true){
-								credit.setBegginer_summ_credit(stod(user_v));
-						}
-						else{
-								cout << "Incorrect data. Write the loan amount" << endl << endl;
-								user_v = "";
-								i--;
-							}
-						}
-						if(i == 1){
-							cout << endl << "Interest rate " << endl;
-							cout << "Procent: ";
-							getline(cin,user_v);
-							if (check(user_v) == true){
-								credit.setProcent(stod(user_v));
-							}
-						else{
-								cout << "Incorrect data. Write the procent" << endl << endl;
-								user_v = "";
-								i--;
-							}
-						}
-						if(i == 2){
-							cout << endl << "Write the period of years " << endl;
-							cout << "Period: ";
-							getline(cin,user_v);
-							if (check(user_v) == true){
-								credit.setCredit_term(stoi(user_v));
+		bool check(string str){
+			return !str.empty() && str.find_first_not_of("0123456789.") == std::string::npos;
+			
+		}
 		
-								
-							}
-						else{
-								cout << "Incorrect data. Write the period of years" << endl << endl;
-								user_v = "";
-								i--;
+		void user_vvod(Credit &credit){
+			
+			for(int i = 0; i <3; i++){
+				string user_v;
+				if(i == 0){
+					cout << "Amount of credit  " << endl;
+					cout << "Summa:  ";
+					getline(cin,user_v);
+					if (check(user_v) == true){
+						credit.setBegginer_summ_credit(stod(user_v));
+				}
+				else{
+						cout << "Incorrect data. Write the loan amount" << endl << endl;
+						user_v = "";
+						i--;
 					}
 				}
-		
+				if(i == 1){
+					cout << endl << "Interest rate " << endl;
+					cout << "Procent: ";
+					getline(cin,user_v);
+					if (check(user_v) == true){
+						credit.setProcent(stod(user_v));
+					}
+				else{
+						cout << "Incorrect data. Write the procent" << endl << endl;
+						user_v = "";
+						i--;
+					}
+				}
+				if(i == 2){
+					cout << endl << "Write the period of years " << endl;
+					cout << "Period: ";
+					getline(cin,user_v);
+					if (check(user_v) == true){
+						credit.setCredit_term(stoi(user_v));
+
+						
+					}
+				else{
+						cout << "Incorrect data. Write the period of years" << endl << endl;
+						user_v = "";
+						i--;
+				}
+			}
 		}
 	}
 };
@@ -162,8 +156,7 @@ public:
 	
 	long double getInstallment(){
 		ostatoc = ostatoc - installment;
-		return ostatoc;
-		
+		return ostatoc;	
 	}
 	
 	long double monthly_installment(int many , int month){
@@ -182,8 +175,6 @@ public:
 	long double getOst(){
 		return ostatoc;
 	}
-	
-	
 	
 };
 
@@ -222,13 +213,11 @@ public:
 		auto now = chrono::system_clock::now();
 	    time_t end_time = chrono::system_clock::to_time_t(now);
 	    string now_time = ctime(&end_time);
-	    
 	    return now_time;
 	}
 	// метод разбивает дату на слова
 	vector<string> split(string now_time){								
 			
-	
 		for(int i = now_time.size() , j = 0, u = 0; i >= 0; i--){
 		
 			if(now_time[i] == ' ' || i == 0){
@@ -239,8 +228,7 @@ public:
 			u++;	
 		}
 		
-		for(int r = 0; r < time_split.size()-1; r++){
-			
+		for(int r = 0; r < time_split.size()-1; r++){	
 			time_split.at(r).erase(0,1);
 		}
 		return time_split;
@@ -250,24 +238,19 @@ public:
 	// количество дней в месяце
 	int getNumberOfDays(int month, int year){
 		
-		if(month == 2)
-		{
+		if(month == 2){
 			if((year%400==0) || (year%4==0 && year%100!=0))	{
-			
 				return 29;
 			}
 			else{
-				
 				return 28;
 			}	
 		}
 		
 		else if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 ||month == 10 || month==12){
-			
 			return 31;
 		}
 		else {	
-			
 			return 30;
 		}
 	} 
